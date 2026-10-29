@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700&family=Plus+Jakarta+Sans:wght@400;500;600;650;700;750;800&display=swap');
+
+/* Shared visual rhythm. Load after the base theme and anatomy artwork. */
+:root{--font-body:'Inter',sans-serif;--font-heading:'Plus Jakarta Sans',sans-serif;--muted:#bab5b5;--line:#2e2a2b;--radius:17px}
+body{font-family:var(--font-body);font-size:15px;line-height:1.7;background:#0f0e0e}
+button,input,select,textarea{font-family:var(--font-body)}
+html{scroll-padding-top:34px}
+main{max-width:1344px;padding:0 44px}
+.header{max-width:1344px;padding:0 44px;min-height:90px;gap:28px}
+.brand{font-family:var(--font-heading);font-weight:750;font-size:25px;letter-spacing:-1.25px}
+.header nav{gap:30px}
+.header nav a{font-size:13px;font-weight:500;min-height:48px;white-space:nowrap}
+.avatar{font-size:12px;padding:11px 16px;min-height:44px}
+.intro{padding:64px 0 59px;gap:30px}
+.intro .eyebrow{font-size:11px;letter-spacing:1.9px;margin-bottom:20px;color:#beb8b9}
+.intro h1{font:700 clamp(32px,3.8vw,48px)/1.18 var(--font-heading);letter-spacing:-1.7px;text-transform:none;max-width:770px;margin:0 0 23px}
+.intro>div>p:last-child{font-size:15px;line-height:1.85;max-width:630px;color:var(--muted)}
+.date-chip{font-size:12px;margin-top:35px;padding:12px 16px;flex:none;border-color:#332f2f}
+.eyebrow{font-size:11px;letter-spacing:1.65px}
+.muted{font-size:14px;line-height:1.8}
+.tiny{font-size:12px;line-height:1.8}
+
+/* Every major task gets a clear heading, introductory line and breathing room. */
+.training-console{display:block}
+#explore,#routines,#routine-builder,#nutrition,#journal{min-width:0;scroll-margin-top:28px}
+#routines,#routine-builder,#nutrition,#journal{margin-top:78px;padding-top:52px;border-top:1px solid var(--line)}
+.section-heading{min-height:0;gap:24px;align-items:center;margin-bottom:26px}
+.section-heading>div:first-child{align-items:flex-start;gap:14px}
+.section-heading h2,.fuel-sidebar .section-heading h2{font:650 25px/1.35 var(--font-heading);letter-spacing:-.8px;margin:0}
+.section-heading-copy,.section-heading>div.section-heading-copy{display:block;min-width:0}
+.section-heading-copy h2{margin:0}
+.section-heading-copy p,.section-intro,.section-description{font-size:14px;line-height:1.85;color:var(--muted);max-width:690px;margin:9px 0 0}
+.section-intro{margin:0 0 26px}
+.section-number{font:500 12px/1.7 var(--font-body);color:#d4bbbe;padding-top:6px;white-space:nowrap}
+.pill,.fuel-sidebar .pill{font-size:11px;padding:7px 11px;border-radius:7px;line-height:1.5}
+.text-button{font-size:12px;line-height:1.7;min-height:36px}
+
+/* A generous anatomy studio, separated from nutrition and planning. */
+.explorer-grid{grid-template-columns:minmax(0,1.03fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.explorer-grid:has(.anatomy-views.both){grid-template-columns:minmax(0,1.18fr) minmax(320px,.82fr)}
+.anatomy-panel{min-height:0;border:1px solid #302c2c;background:#1a1818;border-radius:var(--radius)}
+.panel-top{padding:25px 27px 0;font-size:11px;letter-spacing:1.2px;gap:15px;line-height:1.6}
+.small-tag{font-size:11px;letter-spacing:0;border-radius:6px;padding:5px 8px;color:#c6c1c2}
+.body-stage{min-height:0;padding:25px 24px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:visible;flex:1}
+.body-stage>svg{width:350px;max-width:100%;height:auto;aspect-ratio:340/540;max-height:580px;filter:none}
+.anatomy-views{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr);align-items:start;justify-items:center;gap:20px;width:100%;margin:0}
+.anatomy-views.both{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.anatomy-view{display:flex;flex-direction:column;align-items:center;width:100%;min-width:0;margin:0;gap:11px}
+.body-stage .anatomy-view svg{display:block;align-self:center;width:min(100%,350px);max-width:100%;height:auto;aspect-ratio:340/540;max-height:580px;filter:none}
+.body-stage .anatomy-views.both .anatomy-view svg{width:100%;max-height:520px}
+.anatomy-view figcaption{font-size:11px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;color:#c3bdbe;line-height:1.6}
+.map-label{position:static;inset:auto;margin:20px 0 2px;padding:0;z-index:2;font-size:13px;font-weight:500;line-height:1.7;pointer-events:none;text-align:center}
+.map-grid{inset:20px;opacity:.17}
+.panel-bottom{padding:14px 27px 16px;gap:18px;justify-content:space-between;flex-wrap:wrap}
+.panel-bottom>span{font-size:11px;gap:7px}
+.view-toggle{gap:4px;padding:4px;border-radius:9px;background:#0f0e0e;max-width:100%}
+.view-toggle button{font-size:12px;padding:8px 17px;min-height:39px;border-radius:6px}
+.map-hint{font-size:12px;margin:0 24px 24px;line-height:1.8;color:#b0aaaa}
+.muscle-panel{padding:31px;border:1px solid #2e2a2a;border-radius:var(--radius);min-width:0}
+.muscle-select-row{gap:18px;flex-wrap:wrap}
+.muscle-select-row .eyebrow{font-size:10px;letter-spacing:1.6px}
+.muscle-select-row select{font-size:12px;max-width:165px;padding:8px 10px;min-height:37px}
+.muscle-title{gap:8px;margin:28px 0 20px}
+.muscle-title h2{font:650 35px/1.22 var(--font-heading);letter-spacing:-1.25px;margin:0}
+.muscle-title>span{font-size:12px;line-height:1.7;color:#bcb7b7}
+.muscle-description{font-size:15px;line-height:1.9;margin-bottom:24px;color:#cac6c6}
+.part-tabs{gap:8px;padding-bottom:21px}
+.part-tabs button{font-size:12px;line-height:1.6;min-height:39px;padding:8px 12px;border-radius:7px}
+.part-info{gap:13px;margin:24px 0 31px}
+.info-icon{width:29px;height:29px;border-radius:7px;flex:none}
+.part-info h3{font-size:13px;line-height:1.7;margin:0 0 8px;font-weight:600}
+.part-info p{font-size:14px;line-height:1.9;color:#bbb5b6}
+.exercise-heading{gap:18px;margin-bottom:13px;align-items:baseline}
+.exercise-heading h3{font-size:14px;font-weight:600;line-height:1.7}
+.exercise-heading>span{font-size:11px;text-align:right;line-height:1.7}
+.exercise{padding:15px 14px;gap:14px;margin-top:11px;border:1px solid #2d2a2a;border-radius:11px;background:#1a1818}
+.exercise-icon{height:43px;width:43px;border-radius:9px}
+.exercise h4{font-size:14px;font-weight:500;line-height:1.6;margin-bottom:5px}
+.exercise small{font-size:11px;line-height:1.8}
+.exercise .arrow{font-size:19px;flex:none}
+.growth-details{margin-top:25px;padding-top:20px}
+.growth-details summary{font-size:13px;line-height:1.8}
+.growth-details p{font-size:14px;line-height:1.9}
+.knowledge-strip{margin:26px 0 0;padding:18px 23px;border-radius:12px;background:#111010;gap:15px}
+.knowledge-strip p{font-size:12px;line-height:1.9}
+.knowledge-strip button{font-size:11px;line-height:1.7;min-height:36px}
+.spark{font-size:24px;flex:none}
+
+/* Fuel is its own section with a broad progress overview and a separate meal action. */
+.nutrition-content{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.8fr);gap:26px;align-items:stretch}
+.fuel-sidebar .progress-card,.nutrition-content .progress-card{min-height:0;padding:29px;border:1px solid #2e2a2a;border-radius:var(--radius)}
+.card-heading{gap:20px;align-items:center}
+.card-heading>.muted{font-size:12px;max-width:none;line-height:1.8}
+.card-heading>.text-button{font-size:12px}
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:31px 0 26px}
+.ring-item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:15px;min-width:0}
+.ring-wrap{height:102px;width:102px;flex:none}
+.ring-value{font:600 20px var(--font-heading);letter-spacing:-.6px}
+.ring-meta h4{font-size:12px;font-weight:500;margin:0 0 7px}
+.ring-meta strong{font-size:22px;font-weight:600;line-height:1.35;letter-spacing:-.6px}
+.ring-meta strong small{font-size:12px}
+.ring-target,.ring-remaining{display:block;font-size:11px;line-height:1.8;margin:5px 0 0}
+.ring-remaining{color:#cfb5b7}
+.daily-note{font-size:12px;line-height:1.9;padding-top:20px;gap:10px}
+.nutrition-content>.meal-prompt{border:1px solid #302c2c;background:linear-gradient(145deg,#1e1c1c,#1c1a1a);border-radius:var(--radius);margin:0;padding:30px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0}
+.nutrition-content>.meal-prompt .meal-prompt-heading{display:flex;flex-direction:column;align-items:flex-start;gap:18px;margin-bottom:24px}
+.nutrition-content>.meal-prompt .camera-symbol{width:45px;height:45px;border-radius:12px;font-size:35px}
+.nutrition-content>.meal-prompt h3{font:600 22px/1.4 var(--font-heading);letter-spacing:-.6px;margin:0 0 10px}
+.nutrition-content>.meal-prompt p{font-size:13px;line-height:1.9}
+.nutrition-content>.meal-prompt .primary{min-height:46px;padding:12px 20px;width:100%;font-size:13px;grid-column:auto;grid-row:auto}
+.nutrition-content>.meal-prompt>.tiny{margin-top:14px;font-size:11px;line-height:1.8;text-align:left}
+.fuel-checkin{font-size:12px;line-height:1.8;margin-top:22px;padding-top:18px;gap:10px}
+.primary,.secondary{font-size:13px;line-height:1.6;min-height:44px;padding:11px 18px}
+
+/* Journal, reminders and dialogs inherit the same readable scale. */
+.journal-tools{gap:18px;flex-wrap:wrap;justify-content:flex-end}
+.journal-tools input{font-size:12px;min-height:40px;max-width:155px;padding:9px 11px}
+.journal-tools .text-button{font-size:12px;min-height:40px}
+.journal-card{border-radius:var(--radius)}
+.empty-state{padding:38px 30px;gap:19px;justify-content:flex-start}
+.empty-state h3{font-size:15px;font-weight:550;margin-bottom:8px}
+.empty-state p{font-size:13px;line-height:1.9}
+.empty-state button{margin-left:auto}
+.meal-row{padding:23px 27px;gap:17px}
+.meal-row h4{font-size:14px;line-height:1.7;max-width:470px}
+.meal-row small{font-size:12px;line-height:1.7}
+.meal-macros{font-size:14px;gap:33px}
+.meal-macros small{font-size:11px}
+.meal-thumb{width:48px;height:48px;border-radius:10px}
+.delete-meal{min-height:40px;min-width:40px}
+.reminder-section{padding:25px 28px;gap:19px;margin:30px 0 48px;border-radius:var(--radius)}
+.reminder-section h3{font-size:15px;font-weight:550;margin-bottom:8px}
+.reminder-section p{font-size:13px;line-height:1.9}
+.reminder-icon{height:45px;width:45px;border-radius:11px}
+.reminder-section button{font-size:12px}
+footer{padding:31px 0 36px;gap:25px}
+footer .brand{font-family:var(--font-heading);font-size:20px}
+footer>span,footer>button{font-size:12px}
+dialog{max-width:620px;padding:32px;border-radius:var(--radius)}
+.dialog-heading{margin-bottom:21px;gap:15px}
+.dialog-heading h2{font:650 27px/1.35 var(--font-heading);letter-spacing:-.8px}
+.dialog-heading .eyebrow{font-size:11px;line-height:1.7;margin-bottom:10px}
+label{font-size:13px;line-height:1.7;gap:8px;margin:17px 0}
+input,select{font-size:14px;min-height:45px;padding:11px 12px}
+.close{height:34px;width:34px;min-height:34px}
+.form-grid{gap:17px}
+.form-grid>label{min-width:0}
+.formula-note{font-size:12px;line-height:1.9;padding:16px;margin-top:19px}
+.plan-preview{font-size:14px;line-height:1.9;padding:21px 0}
+.photo-inputs{gap:13px}
+.upload-area{padding:20px 15px}
+.upload-area>strong{font-size:13px}
+.upload-area>small{font-size:11px}
+.camera-button{font-size:13px}
+.food-builder{gap:10px;grid-template-columns:minmax(0,1fr) 105px auto}
+.food-builder label{font-size:12px}
+.food-builder input,.food-builder select{font-size:13px}
+.food-builder button{min-height:44px}
+.ingredient-list{font-size:12px;line-height:2}
+.suggestions button{font-size:12px;line-height:1.7;min-height:36px}
+.form-grid.three label{font-size:12px}
+#infoBody{font-size:14px;line-height:1.95}
+#infoBody h3{font-family:var(--font-heading);font-size:16px}
+
+@media(max-width:1100px){
+ main,.header{padding-left:32px;padding-right:32px}
+ .header{gap:22px}.header nav{gap:23px}.header nav a{font-size:12px}
+ .intro{padding:54px 0 50px}.intro h1{font-size:41px}
+ .explorer-grid{gap:23px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ .explorer-grid:has(.anatomy-views.both){grid-template-columns:minmax(0,1.1fr) minmax(315px,.9fr)}
+ .muscle-panel{padding:26px}.muscle-description{font-size:14px}.part-info p{font-size:13px}
+ .exercise h4{font-size:13px}.exercise-icon{width:39px;height:39px}.exercise{gap:11px;padding:13px 11px}
+ .muscle-select-row{gap:12px}.muscle-select-row select{max-width:148px}
+ .body-stage{padding:23px 20px 13px}.panel-top{padding:23px 22px 0}.panel-bottom{padding:13px 22px 16px}
+ .nutrition-content{grid-template-columns:minmax(0,1.5fr) minmax(265px,.8fr);gap:23px}
+ .nutrition-content .progress-card{padding:25px}.nutrition-content>.meal-prompt{padding:25px}
+ .rings{gap:16px}.ring-wrap{width:88px;height:88px}.ring-meta strong{font-size:20px}
+}
+@media(max-width:900px){
+ .header{flex-wrap:wrap;padding-top:23px;min-height:0;gap:16px 25px}
+ .header .brand{font-size:23px}.avatar{margin-left:auto;display:flex}
+ .header nav{flex-basis:100%;order:3;gap:0;justify-content:space-between;min-height:49px}
+ .header nav a{font-size:13px;min-height:49px;padding:0 3px}
+ .intro{padding:46px 0 45px}.intro h1{font-size:38px;letter-spacing:-1.4px}.date-chip{display:none}
+ .explorer-grid,.explorer-grid:has(.anatomy-views.both){grid-template-columns:1fr;gap:24px}
+ .anatomy-panel{min-height:0}.body-stage{padding:27px 24px 12px}
+ .body-stage .anatomy-view svg{width:min(100%,340px);max-height:540px}
+ .anatomy-views.both{gap:28px;max-width:650px}.body-stage .anatomy-views.both .anatomy-view svg{max-height:510px}
+ .muscle-panel{padding:30px}.muscle-title{margin:23px 0 18px}.muscle-description{font-size:15px;max-width:700px}
+ .muscle-title h2{font-size:34px}.part-info p{font-size:14px}.exercise h4{font-size:14px}.exercise small{font-size:12px}
+ .exercise{padding:15px;gap:15px}.exercise-icon{width:43px;height:43px}
+ #routines,#routine-builder,#nutrition,#journal{margin-top:63px;padding-top:43px}
+ .section-heading h2,.fuel-sidebar .section-heading h2{font-size:24px}
+ .nutrition-content{grid-template-columns:1fr;gap:22px}
+ .nutrition-content .progress-card{padding:29px}.rings{gap:27px}.ring-wrap{width:104px;height:104px}
+ .nutrition-content>.meal-prompt{padding:28px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 26px;align-items:center}
+ .nutrition-content>.meal-prompt .meal-prompt-heading{flex-direction:row;align-items:center;margin:0;gap:18px}
+ .nutrition-content>.meal-prompt h3{font-size:20px;margin-bottom:5px}
+ .nutrition-content>.meal-prompt .primary{width:auto;grid-column:2;grid-row:1}
+ .nutrition-content>.meal-prompt>.tiny{grid-column:1/-1;margin:14px 0 0}
+ .empty-state{padding:32px 25px;flex-wrap:wrap}.empty-state button{margin-left:auto}
+ .meal-row{padding:21px 24px}.meal-macros{gap:25px}
+}
+@media(max-width:600px){
+ body{font-size:14px}main,.header{padding-left:22px;padding-right:22px}
+ .header{padding-top:21px;gap:15px 12px}.header .brand{font-size:21px}.brandmark{display:inline-flex}
+ .avatar{font-size:11px;min-height:39px;padding:8px 11px;gap:10px}
+ .header nav{min-height:49px;gap:10px}.header nav a{font-size:11px;padding:0;min-height:49px}
+ .intro{padding:37px 0 38px;gap:0}.intro .eyebrow{font-size:10px;letter-spacing:1.45px;margin-bottom:16px}
+ .intro h1{font-size:32px;line-height:1.2;letter-spacing:-1.15px;margin-bottom:19px}
+ .intro>div>p:last-child{font-size:14px;line-height:1.85;max-width:none}
+ .section-heading{gap:16px;align-items:flex-start;flex-wrap:wrap;margin-bottom:23px}
+ .section-heading>div:first-child{gap:11px}.section-number{padding-top:4px;font-size:11px}
+ .section-heading h2,.fuel-sidebar .section-heading h2{font-size:21px;letter-spacing:-.6px}
+ .section-heading-copy p,.section-intro,.section-description{font-size:13px;line-height:1.9;margin-top:9px}
+ .section-intro{margin:0 0 23px}.pill,.fuel-sidebar .pill{font-size:10px;padding:6px 9px}
+ .panel-top{padding:22px 20px 0;font-size:10px;letter-spacing:.9px}.small-tag{font-size:10px;padding:5px 7px}
+ .body-stage{padding:24px 18px 12px}.body-stage .anatomy-view svg{width:min(100%,310px);max-height:520px}
+ .body-stage>svg{width:300px;height:auto;max-height:520px}
+ .anatomy-views.both{grid-template-columns:1fr;gap:27px}
+ .body-stage .anatomy-views.both .anatomy-view svg{width:min(100%,300px);max-height:495px}
+ .anatomy-view figcaption{font-size:11px}.map-label{font-size:12px;margin-top:19px}
+ .panel-bottom{padding:13px 20px 15px;gap:14px;justify-content:center}
+ .panel-bottom>span{font-size:10px}.view-toggle{gap:3px;padding:4px}.view-toggle button{min-height:41px;padding:8px 16px;font-size:12px}
+ .map-hint{font-size:11px;margin:0 20px 22px}
+ .muscle-panel{padding:25px 22px}.muscle-select-row{gap:14px}.muscle-select-row .eyebrow{font-size:9px;letter-spacing:1.2px}
+ .muscle-select-row select{font-size:12px;max-width:140px;min-height:39px;padding:8px}
+ .muscle-title{margin:25px 0 19px}.muscle-title h2{font-size:30px;letter-spacing:-1px}.muscle-title>span{font-size:12px}
+ .muscle-description{font-size:14px;line-height:1.9;margin-bottom:22px}
+ .part-tabs{gap:7px;padding-bottom:20px}.part-tabs button{font-size:11px;min-height:40px;padding:8px 10px}
+ .part-info{gap:11px;margin:23px 0 28px}.part-info h3{font-size:13px}.part-info p{font-size:13px;line-height:1.9}
+ .info-icon{width:26px;height:26px}.exercise-heading{gap:11px;margin-bottom:12px}.exercise-heading h3{font-size:13px}.exercise-heading>span{font-size:10px}
+ .exercise{padding:14px 11px;gap:11px;margin-top:10px}.exercise-icon{width:37px;height:37px}.exercise h4{font-size:13px;line-height:1.7}.exercise small{font-size:11px}
+ .growth-details{margin-top:23px;padding-top:18px}.growth-details summary{font-size:12px}.growth-details p{font-size:13px}
+ .knowledge-strip{padding:18px;gap:12px;margin-top:23px;align-items:flex-start}.knowledge-strip p{font-size:12px;line-height:1.9}.knowledge-strip button{display:none}
+ #routines,#routine-builder,#nutrition,#journal{margin-top:51px;padding-top:35px}
+ .nutrition-content{gap:20px}.nutrition-content .progress-card{padding:23px 22px}
+ .card-heading{gap:16px;align-items:flex-start}.card-heading>.muted{font-size:11px}.card-heading>.text-button{font-size:11px;white-space:nowrap}
+ .rings{grid-template-columns:1fr;gap:23px;margin:26px 0}.ring-item{flex-direction:row;text-align:left;align-items:center;gap:21px}
+ .ring-wrap{width:86px;height:86px}.ring-value{font-size:18px}.ring-meta h4{font-size:12px;margin-bottom:5px}.ring-meta strong{font-size:22px}
+ .ring-meta strong small{font-size:12px}.ring-target,.ring-remaining{display:block;font-size:11px;line-height:1.7;margin:4px 0 0}
+ .daily-note{font-size:12px;padding-top:18px}.fuel-checkin{font-size:11px;margin-top:19px;padding-top:17px}
+ .nutrition-content>.meal-prompt{display:flex;align-items:stretch;padding:25px 23px}
+ .nutrition-content>.meal-prompt .meal-prompt-heading{flex-direction:column;align-items:flex-start;gap:17px;margin-bottom:22px}
+ .nutrition-content>.meal-prompt h3{font-size:21px;line-height:1.4;margin-bottom:8px}.nutrition-content>.meal-prompt p{font-size:13px}
+ .nutrition-content>.meal-prompt .primary{width:100%;min-height:46px;font-size:13px}.nutrition-content>.meal-prompt>.tiny{font-size:11px;margin-top:13px}
+ .journal-tools{gap:13px;justify-content:flex-start;width:100%}.journal-tools input{font-size:12px;max-width:153px;padding:9px 10px}.journal-tools .text-button{font-size:12px}
+ .empty-state{padding:28px 22px;gap:15px}.empty-state>div{min-width:0;flex:1}.empty-state h3{font-size:14px}.empty-state p{font-size:12px}.empty-state button{margin-left:0;flex-basis:100%;font-size:12px}
+ .meal-row{padding:20px;gap:12px}.meal-row h4{font-size:13px;line-height:1.7;max-width:none}.meal-row small{font-size:11px}.meal-thumb{width:42px;height:42px}
+ .meal-row>div:nth-child(2){flex:1;min-width:0}.meal-macros{margin-left:54px;flex-basis:calc(100% - 54px);gap:24px;font-size:13px}.meal-macros small{font-size:10px}
+ .delete-meal{padding:5px;min-width:32px;min-height:38px}
+ .reminder-section{padding:23px;gap:14px;margin:25px 0 36px}.reminder-section>div:nth-child(2){min-width:0;flex:1}
+ .reminder-section h3{font-size:14px;line-height:1.7}.reminder-section p{font-size:12px;line-height:1.9}.reminder-icon{width:40px;height:40px}
+ .reminder-section button{margin-left:0;flex-basis:100%;font-size:12px}
+ footer{padding:27px 0 31px;gap:14px}footer .brand{font-size:19px}footer>span,footer>button{font-size:11px}
+ dialog{padding:25px 22px;max-height:91dvh}.dialog-heading{gap:12px}.dialog-heading h2{font-size:23px;letter-spacing:-.6px}
+ label{font-size:12px;margin:16px 0}.form-grid{gap:13px}.form-grid.three{gap:8px}.form-grid.three label{font-size:11px}
+ input,select,.food-builder select,.food-builder input{font-size:16px;min-height:44px}
+ .food-builder{grid-template-columns:minmax(0,1fr) 80px;gap:10px}.food-builder label{font-size:11px}.food-builder button{grid-column:1/-1;margin-top:1px;min-height:41px}
+ .photo-inputs{gap:10px;align-items:stretch}.upload-area{padding:17px 12px}.upload-area>strong{font-size:12px}.upload-area>small{font-size:10px}.camera-button{font-size:12px;padding:12px}
+ .formula-note{font-size:11px;padding:14px}.plan-preview{font-size:13px;padding:19px 0}.tiny{font-size:11px}
+}
+@media(max-width:360px){
+ main,.header{padding-left:17px;padding-right:17px}.header .brand{font-size:20px}.brandmark{display:none}.avatar{font-size:10px;padding:8px 10px}
+ .header nav{gap:7px}.header nav a{font-size:10px}.intro h1{font-size:29px;letter-spacing:-1px}
+ .section-heading h2,.fuel-sidebar .section-heading h2{font-size:20px}.muscle-panel{padding:23px 19px}
+ .panel-top{padding:21px 18px 0;gap:8px}.panel-bottom{padding:12px 17px 15px}.view-toggle button{padding:8px 12px}
+ .muscle-select-row select{max-width:125px}.exercise{gap:9px;padding:13px 10px}.exercise-icon{width:33px;height:33px}
+ .exercise h4{font-size:12px}.exercise small{font-size:10px}.exercise-heading>span{font-size:10px}
+ .nutrition-content .progress-card{padding:22px 19px}.ring-item{gap:17px}.ring-wrap{width:77px;height:77px}.ring-meta strong{font-size:20px}
+ .nutrition-content>.meal-prompt{padding:24px 21px}.meal-row{padding:18px 17px}.meal-macros{gap:18px}
+ dialog{padding:23px 19px}.dialog-heading h2{font-size:21px}.form-grid.three label{font-size:10px}.form-grid.three input{padding-left:8px;padding-right:8px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:480px){dialog .form-grid,dialog .form-grid.three{grid-template-columns:minmax(0,1fr)}dialog .form-grid.three label{font-size:12px}}

@@ -1,0 +1,9 @@
+/* Local date and calendar calculations, shared with the regression tests. */
+(()=>{const dayKey=d=>[d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-');const parse=s=>{const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12);};
+function monthDays(year,month){const first=new Date(year,month,1,12),offset=(first.getDay()+6)%7,count=new Date(year,month+1,0,12).getDate();return {offset,days:Array.from({length:count},(_,i)=>dayKey(new Date(year,month,i+1,12)))};}
+function versionAt(versions,date){return versions.filter(v=>v.from<=date).sort((a,b)=>a.from.localeCompare(b.from)).at(-1)||null;}
+function workoutAt(versions,date){const v=versionAt(versions,date);return v?.days.find(d=>d.weekday===['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][parse(date).getDay()])||null;}
+function nutrition(meals,date){return meals.filter(m=>m.date===date).reduce((t,m)=>{for(const k of ['calories','protein','carbs'])t[k]+=Number(m[k])||0;t.count++;return t;},{calories:0,protein:0,carbs:0,count:0});}
+function targetState(value,target,key,hasMeals=true){if(!target||target<=0)return {label:'No target',kind:'neutral',hit:false};if(!hasMeals)return {label:'No meals logged',kind:'neutral',hit:false};if(key==='protein')return value>=target?{label:'Target hit',kind:'hit',hit:true}:{label:'Below target',kind:'below',hit:false};return value<target*.95?{label:'Below range',kind:'below',hit:false}:value>target*1.05?{label:'Above range',kind:'over',hit:false}:{label:'Target hit',kind:'hit',hit:true};}
+function burn(minutes,weight,met){return Number.isFinite(minutes)&&minutes>0&&Number.isFinite(weight)&&weight>0&&Number.isFinite(met)&&met>0?Math.round(met*3.5*weight/200*minutes):null;}
+const api={dayKey,parse,monthDays,versionAt,workoutAt,nutrition,targetState,burn};if(typeof window!=='undefined')window.CalendarCore=api;if(typeof module!=='undefined')module.exports=api;})();
