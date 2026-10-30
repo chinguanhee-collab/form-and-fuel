@@ -73,3 +73,6 @@ Run node tests/accounts.cjs for account isolation, chunk roundtrip including pho
 
 ## Nutrition and personal meal library update
 Nutrition now includes a strength goal (maintenance energy), a modest 5% muscle-gain surplus, a 15% fat-loss deficit, 1.8 g/kg protein (2.0 during fat loss), 25% energy from dietary fat and remaining energy from carbs. These are explained starting choices with source links in the calculator. Existing targets are preserved until recalculated. Fat is optional in meal records; missing historical fat is shown as unknown. Personal dishes are stored inside the existing account-scoped fuel record and sync with other progress. Daily Fuel includes date navigation and meal editing/removal. Six additional explorer exercises and beveled, labeled 3D dumbbell plates are included.
+
+## Selected-date wellness targets and daily burn
+Activity/recovery targets now default to the selected Daily Fuel day and expose an explicit effective date. Entries apply inclusively from that date until the next saved target version. Existing earlier and later versions remain intact. Total daily burn can be recorded, edited or removed separately from workout burn, with no automatic food-target adjustment. Sleep and daily-burn edits preserve other fields in the same date record. Run node tests/wellness.cjs for date and independent-record regression checks.
