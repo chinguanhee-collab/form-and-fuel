@@ -1,7 +1,7 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict');
 const elements=new Map(),values=new Map();
 const storage={getItem:k=>values.get(k)??null,setItem:(k,v)=>values.set(k,String(v)),removeItem:k=>values.delete(k)};
-const document={querySelector:s=>{if(!elements.has(s))elements.set(s,{textContent:'',hidden:false,querySelector:()=>({}),showModal(){},close(){}});return elements.get(s)}};
+const document={createElement:()=>({append(){},replaceChildren(){}}),createTextNode:x=>x,querySelector:s=>{if(!elements.has(s))elements.set(s,{textContent:'',hidden:false,replaceChildren(){},append(){},querySelector:()=>({}),showModal(){},close(){}});return elements.get(s)}};
 const ctx=vm.createContext({console,document,localStorage:storage,Storage:function(){},setTimeout:()=>1,clearTimeout(){},window:{addEventListener(){}},navigator:{},location:{reload(){}},Blob,URL});
 vm.runInContext(fs.readFileSync('dist/account-store.js','utf8'),ctx);
 ctx.AccountStore=ctx.window.AccountStore;

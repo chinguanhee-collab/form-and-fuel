@@ -69,3 +69,7 @@ Cloud snapshots include meal photos and are split into documents below users/{ui
 Firebase console prerequisites: Google provider enabled, production site domain authorized, default Firestore database created, and published rules allowing request.auth.uid == userId under users/{userId}/{document=**}. The Firebase client config is public; no service-account key belongs in this repository. The Site's existing owner-only hosting gate remains in place.
 
 Run node tests/accounts.cjs for account isolation, chunk roundtrip including photos, stale revision rejection, offline retention, concurrent local edits, and pending-data protection. Actual Google login and two-device sync must also be verified by the account owner in production.
+
+
+## Nutrition and personal meal library update
+Nutrition now includes a strength goal (maintenance energy), a modest 5% muscle-gain surplus, a 15% fat-loss deficit, 1.8 g/kg protein (2.0 during fat loss), 25% energy from dietary fat and remaining energy from carbs. These are explained starting choices with source links in the calculator. Existing targets are preserved until recalculated. Fat is optional in meal records; missing historical fat is shown as unknown. Personal dishes are stored inside the existing account-scoped fuel record and sync with other progress. Daily Fuel includes date navigation and meal editing/removal. Six additional explorer exercises and beveled, labeled 3D dumbbell plates are included.
