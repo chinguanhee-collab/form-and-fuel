@@ -34,7 +34,7 @@ async function boot(){try{
  if(user){try{await connect();}catch(e){say(friendly(e));}}else say('Sign in to save meals, photos, targets, routines, calendar and recovery across devices.');
  let initial=true;A.onAuthStateChanged(auth,u=>{if(initial){initial=false;if(u?.uid===user?.uid)return;}if(u?.uid!==user?.uid)location.reload();});
  }catch(e){const uid=nativeGet('ff-active-account');user=uid?{uid,email:'Account cached on this device'}:null;if(!store)mountStorage(uid||null);say('Account connection unavailable. You can keep using this device. Reload to reconnect.');}
- const scripts=['data.js','nutrition-core.js','extra-exercises.js','body-map.js','exercise-media.js','exercise-visuals.js','app.js','routines.js','meal-composer.js','motion.js','calendar-core.js','calendar.js','routine-popup.js','wellness-core.js','wellness.js','workout-hub.js','mobile-nav.js','fuel-history.js'];
+ const scripts=['data.js','nutrition-core.js','profile-core.js','extra-exercises.js','body-map.js','exercise-media.js','exercise-visuals.js','app.js','routines.js','meal-composer.js','motion.js','calendar-core.js','calendar.js','routine-popup.js','wellness-core.js','wellness.js','workout-hub.js','mobile-nav.js','fuel-history.js','account-profile.js'];
  for(const src of scripts)await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=src;s.onload=resolve;s.onerror=reject;document.body.append(s);});
  const art=document.createElement('script');art.type='module';art.src='dumbbell-3d.js';document.body.append(art);document.querySelector('#accountBoot').hidden=true;
  schedule();window.addEventListener('online',()=>schedule());window.addEventListener('beforeunload',e=>{if(user&&meta().dirty){e.preventDefault();e.returnValue='';}});

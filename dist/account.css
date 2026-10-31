@@ -17,3 +17,5 @@ dialog .close:focus-visible{outline:2px solid #ff8298;outline-offset:4px}
 .dialog-heading h2,.dashboard-dialog-top h2{overflow-wrap:anywhere}
 .dashboard-dialog-top .close{align-self:center}
 @media(prefers-reduced-motion:reduce){dialog .close{transition:none}}
+
+.account-profile{border-top:1px solid #4b2a36;border-bottom:1px solid #4b2a36;padding:20px 0;margin:20px 0}.account-profile h3{font-size:23px;margin:0 0 10px}.account-profile input[readonly]{background:#211a20;color:#cdbbc3}.account-profile .form-grid label{font-size:13px}.account-profile .plan-preview{font-size:14px}.account-profile .tiny{font-size:12px;line-height:1.7}
