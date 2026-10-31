@@ -1,0 +1,24 @@
+.motion-backdrop.gym-ready{background:#101217}
+.motion-backdrop.gym-ready>i{display:none}
+.motion-backdrop>canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.gym-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,6,9,.8),rgba(5,6,9,.3) 60%,rgba(5,6,9,.38));pointer-events:none}
+.gym-enabled .header{background:rgba(10,10,13,.86);backdrop-filter:blur(18px)}
+.gym-enabled .hero-copy{text-shadow:0 2px 20px #000}
+.gym-enabled .hero-copy>p:not(.eyebrow){color:#e1dcdf}
+.gym-enabled .hero-art{background:radial-gradient(ellipse at 50% 48%,#5e152582,#111216bd 70%);backdrop-filter:blur(8px)}
+.gym-enabled .section-heading{background:#090b0ed9;padding:20px 24px;border:1px solid #ffffff12;border-radius:18px}
+.gym-enabled dialog .section-heading{background:transparent;padding:0;border:0}
+.gym-enabled .knowledge-strip{background:#101115e8;padding:22px;border-radius:16px}
+.gym-enabled .journey,.gym-enabled .routine-launch,.gym-enabled .my-workout-card,.gym-enabled .reminder-section{box-shadow:0 12px 40px #0004}
+.gym-scroll-hint{display:none;align-items:center;gap:12px;margin-top:30px;color:#e1c7ce;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+.gym-enabled .gym-scroll-hint{display:flex}
+.gym-scroll-hint>span:first-child{display:grid;place-items:center;width:28px;height:40px;border:1px solid #f596a770;border-radius:20px;color:#ff8296;font-size:20px}
+.gym-control{position:fixed;bottom:max(18px,env(safe-area-inset-bottom));right:22px;z-index:19;display:flex;align-items:center;gap:10px;padding:11px 16px;min-height:44px;border:1px solid #ffffff26;border-radius:50px;background:#111216ed;backdrop-filter:blur(12px);color:#eee8eb;box-shadow:0 4px 20px #0005;font-size:12px}
+.gym-control[hidden]{display:none}.gym-control svg{width:14px;height:14px}.gym-control[aria-pressed=false] .gym-pause-icon{display:none}.gym-control[aria-pressed=true] .gym-play-icon{display:none}
+.gym-finish{position:relative;min-height:65vh;display:none;align-items:flex-end;justify-content:space-between;gap:24px;padding:50px 0 34px;margin-top:55px;pointer-events:none}
+.gym-enabled .gym-finish{display:flex}.gym-finish-copy{max-width:310px;padding:20px 24px;background:#090b0ec4;border:1px solid #ffffff16;border-radius:18px;backdrop-filter:blur(10px)}
+.gym-finish .eyebrow{font-size:10px;margin:0 0 8px}.gym-finish h2{font:700 clamp(25px,3vw,40px)/1.15 var(--font-heading);letter-spacing:-1px;margin:0;color:#fff}
+.gym-progress-track{height:2px;width:130px;background:#ffffff35;margin-top:16px;overflow:hidden}.gym-progress-track span{display:block;height:100%;background:#ff4966;transform-origin:left;transform:scaleX(0)}
+.gym-enabled footer{background:#0b0c10eb;padding:24px;border-radius:18px;margin-bottom:70px}
+@media(max-width:700px){.gym-shade{background:linear-gradient(90deg,#06080bbd,#06080b5c)}.gym-control{right:14px;bottom:max(12px,env(safe-area-inset-bottom));font-size:11px;padding:10px 13px}.gym-enabled .section-heading{padding:18px 16px}.gym-finish{min-height:75svh;padding:20px 0 0;align-items:center;justify-content:center}.gym-finish-copy{padding:16px 18px;max-width:235px}.gym-finish h2{font-size:25px}.gym-enabled footer{padding:20px 15px}.gym-scroll-hint{font-size:9px;letter-spacing:1px}}
+@media(prefers-reduced-motion:reduce){.gym-scroll-hint{display:none!important}}
