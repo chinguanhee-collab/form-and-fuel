@@ -86,3 +86,8 @@ The current interface uses quiet black surfaces, red actions, readable system ty
 ## Training architecture design preview
 
 Open `dist/architecture-preview/performance.html` through your web server. This black and lavender interactive prototype follows `design.md` and uses temporary sample data; it does not connect to the production account. The production entry point remains `dist/index.html`.
+
+
+## Main website design (November 2026)
+
+The main `dist/index.html` now opens the training architecture interface. This interface currently uses sample data. The previous account-based application remains available at `previous-app.html`, linked from the new homepage, with its existing cloud and local storage implementation. Publishing this change does not migrate account features into the new interface.
