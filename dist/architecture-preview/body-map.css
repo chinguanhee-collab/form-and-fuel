@@ -1,0 +1,13 @@
+/* Rounded anatomy contours share a single centerline and coordinate system. */
+:is(#bodyMap,.body-map-figure) .anatomy-base{fill:var(--anatomy-base-fill,#353131);stroke:#bbb5b6;stroke-width:1.4;stroke-linejoin:round}
+:is(#bodyMap,.body-map-figure) .muscle-shape{fill:var(--muscle-fill,#7d7475);stroke:#d8d4d5;stroke-width:1.4;stroke-linejoin:round;stroke-linecap:round;transition:fill .18s,filter .18s}
+:is(#bodyMap,.body-map-figure) .muscle-shape:hover,:is(#bodyMap,.body-map-figure) .muscle-shape:focus-visible{fill:#ce9197;stroke:#f3eced;filter:drop-shadow(0 0 5px #cd909640)}
+:is(#bodyMap,.body-map-figure) .muscle-shape.active{fill:var(--accent);stroke:#e3d3d5}
+:is(#bodyMap,.body-map-figure) .muscle-shape[data-muscle="neck"]{stroke:#d8d4d5;stroke-width:1.4;pointer-events:visiblePainted}
+:is(#bodyMap,.body-map-figure) .muscle-shape[data-muscle="neck"].active{stroke:#e3d3d5}
+:is(#bodyMap,.body-map-figure) .region-hit{fill:none!important;stroke:transparent!important;stroke-width:10!important;pointer-events:stroke}
+:is(#bodyMap,.body-map-figure) .anatomy-head{fill:#575051;stroke:#d8d4d5;stroke-width:1.15;stroke-linejoin:round;pointer-events:none}
+:is(#bodyMap,.body-map-figure) .anatomy-detail{fill:none;stroke:#dcdada;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;opacity:.5;pointer-events:none}
+.body-stage svg{width:300px;max-width:96%;height:500px;filter:none}
+.map-grid{opacity:.35}
+@media(max-width:700px){.anatomy-panel{min-height:620px}.body-stage{min-height:490px}.body-stage svg{width:300px;height:490px}.map-label{bottom:0}}

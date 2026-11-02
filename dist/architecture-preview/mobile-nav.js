@@ -1,0 +1,6 @@
+(()=>{const header=document.querySelector('.header'),nav=header.querySelector('nav'),button=document.createElement('button'),mobile=matchMedia('(max-width:700px)');nav.id='mainNavigation';button.type='button';button.className='mobile-nav-toggle';button.setAttribute('aria-controls',nav.id);button.setAttribute('aria-expanded','false');button.textContent='Menu · '+(nav.querySelector('.active')?.textContent||'Explore');header.insertBefore(button,nav);
+function close(){header.removeAttribute('data-mobile-menu');button.setAttribute('aria-expanded','false');}
+button.onclick=()=>{const open=button.getAttribute('aria-expanded')!=='true';header.toggleAttribute('data-mobile-menu',open);if(open)header.dataset.mobileMenu='open';button.setAttribute('aria-expanded',String(open));};
+nav.addEventListener('click',e=>{const a=e.target.closest('a');if(!a||!mobile.matches)return;button.textContent='Menu · '+a.textContent;nav.querySelectorAll('a').forEach(link=>link.classList.toggle('active',link===a));close();});
+header.addEventListener('keydown',e=>{if(e.key==='Escape'&&mobile.matches&&button.getAttribute('aria-expanded')==='true'){close();button.focus();}});
+mobile.addEventListener('change',close);})();

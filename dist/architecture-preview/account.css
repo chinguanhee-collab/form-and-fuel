@@ -1,0 +1,23 @@
+.account-button{border:1px solid #ef4357!important;background:#251117!important;color:#fff!important;padding:10px 16px;border-radius:12px;font:inherit;cursor:pointer;white-space:nowrap}.account-dialog{width:min(540px,calc(100% - 28px))}.account-dialog h2{font-size:30px}.account-dialog p{line-height:1.65}.account-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}.account-actions button{flex:1}.account-status{border:1px solid #52303a;border-radius:14px;padding:16px;background:#1e1419;margin:18px 0;color:#ffd6dc}.account-email{overflow-wrap:anywhere}.account-boot{position:fixed;inset:0;background:#09090bef;z-index:10000;display:grid;place-items:center;color:#fff;font:18px system-ui}.account-boot[hidden]{display:none}.account-boot span:before{content:'';display:inline-block;width:14px;height:14px;border:2px solid #652331;border-top-color:#ff5268;border-radius:50%;margin-right:12px;animation:account-spin .8s linear infinite}@keyframes account-spin{to{transform:rotate(360deg)}}@media(max-width:750px){.header{flex-wrap:wrap}.account-button{font-size:13px;padding:8px 12px}.header nav{order:3;width:100%}}@media(prefers-reduced-motion:reduce){.account-boot span:before{animation:none}}
+@media(max-width:1250px){.header{flex-wrap:wrap;gap:12px}.header nav{order:3;width:100%;justify-content:center;overflow-x:auto}.account-button{margin-left:auto}}
+
+.account-button{display:inline-flex;align-items:center;gap:10px}.google-avatar{width:30px;height:30px;position:relative;display:grid;place-items:center;border-radius:50%;background:#a52f42;overflow:hidden}.google-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.fuel-history-controls{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:20px 0 30px}.fuel-history-controls label{display:grid;gap:8px}.fuel-meal-history{margin-top:30px;padding-top:25px;border-top:1px solid #45313a}.fuel-meal-row{display:flex;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid #36272d}.fuel-meal-row>div{flex:1}.fuel-meal-row p{font-size:14px;color:#c5b9bf}.saved-dishes{display:grid;gap:10px}.saved-dish{display:flex;gap:12px;align-items:center;justify-content:space-between}.nutrition-evidence{margin:20px 0;line-height:1.7}.macro-fat{background:#34231d;color:#ffccaa}.macro-fat .macro-fill{background:#7c422e}.macro-fat .macro-icon{background:#40231f}@media(max-width:600px){.fuel-meal-row{flex-wrap:wrap}.fuel-meal-row>div{flex-basis:100%}}
+
+.total-burn-card{padding:22px;border-radius:22px;border:1px solid #6d3943;background:linear-gradient(120deg,#301d25,#19181e);margin-top:12px}.total-burn-card h4{font-size:18px;margin:10px 0}.total-burn-card>strong{font-size:30px}.total-burn-card p{font-size:14px;color:#cbbfc4;margin-bottom:0}.wellness-actions{flex-wrap:wrap}
+
+/* Geometric close icon avoids font baseline and inherited button-padding offsets. */
+dialog .close{position:relative;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;flex:0 0 44px;width:44px;height:44px;min-width:44px;min-height:44px;padding:0;margin:0 0 0 auto;border:1px solid #71303f;border-radius:50%;font-size:0;line-height:0;color:#fff0f3;background:#351b23;cursor:pointer;align-self:flex-start;transition:background .18s ease,border-color .18s ease;}
+dialog .close::before,dialog .close::after{content:'';position:absolute;left:50%;top:50%;width:15px;height:2px;border-radius:2px;background:currentColor;pointer-events:none;}
+dialog .close::before{transform:translate(-50%,-50%) rotate(45deg)}
+dialog .close::after{transform:translate(-50%,-50%) rotate(-45deg)}
+dialog .close:hover{background:#602336;border-color:#ef536f}
+dialog .close:focus-visible{outline:2px solid #ff8298;outline-offset:4px}
+.dialog-heading,.dashboard-dialog-top{gap:20px;min-width:0}
+.dialog-heading>div{min-width:0}
+.dialog-heading h2,.dashboard-dialog-top h2{overflow-wrap:anywhere}
+.dashboard-dialog-top .close{align-self:center}
+@media(prefers-reduced-motion:reduce){dialog .close{transition:none}}
+
+.account-profile{border-top:1px solid #4b2a36;border-bottom:1px solid #4b2a36;padding:20px 0;margin:20px 0}.account-profile h3{font-size:23px;margin:0 0 10px}.account-profile input[readonly]{background:#211a20;color:#cdbbc3}.account-profile .form-grid label{font-size:13px}.account-profile .plan-preview{font-size:14px}.account-profile .tiny{font-size:12px;line-height:1.7}
+
+.brief-notes{padding-left:18px;margin:0;color:var(--muted);font-size:15px;line-height:1.7}.brief-notes li+li{margin-top:7px}

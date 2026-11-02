@@ -81,3 +81,8 @@ Activity/recovery targets now default to the selected Daily Fuel day and expose 
 ## Ryze branding and interface
 
 The current interface uses quiet black surfaces, red actions, readable system typography, and the supplied Ryze mountain wordmark. The desktop 3D dumbbell remains interactive; mobile prioritizes the training tools and defaults to a single body view. The background gym walkthrough is no longer loaded. Existing `form-fuel-*` storage keys and Firebase resource names are intentionally retained so the rebrand preserves saved progress and cloud compatibility.
+
+
+## Training architecture design preview
+
+Open `dist/architecture-preview/performance.html` through your web server. This black and lavender interactive prototype follows `design.md` and uses temporary sample data; it does not connect to the production account. The production entry point remains `dist/index.html`.
