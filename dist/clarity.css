@@ -1,0 +1,141 @@
+/* A quiet frame for the training tools. Loaded after the original theme. */
+:root{--bg:#0c0c0e;--panel:#171719;--map:#171719;--ink:#fafafa;--muted:#c0bfc3;--accent:#c91536;--line:#38383c;--radius:12px;--font-body:Arial,Helvetica,sans-serif;--font-heading:Arial,Helvetica,sans-serif}
+body{background:var(--bg);color:var(--ink);font-size:16px}
+body *{text-shadow:none!important}
+body :is(button,a,.journey,.routine-launch,.my-workout-card,.reminder-section,.anatomy-panel,.muscle-panel,.hero-art){box-shadow:none}
+main{max-width:1440px;margin:auto;padding:0 40px}
+.header{padding:20px 40px;min-height:80px;background:var(--bg);border:0}
+.header nav a{font-size:14px;color:var(--muted)}
+.header .account-button{background:var(--panel);border:0;border-radius:6px;color:var(--ink)}
+.header #profileButton{background:var(--panel);border:0;font-size:14px}
+.intro.studio-hero{grid-template-columns:1.1fr 1fr;padding:64px 0 48px;gap:48px;align-items:center}
+.intro h1{font-family:var(--font-heading);font-size:clamp(48px,5.4vw,76px);font-weight:700;line-height:1.02;letter-spacing:-.055em;color:var(--ink);margin:0 0 28px}
+.hero-copy>p:not(.eyebrow){font-size:18px;line-height:1.6;color:var(--muted);max-width:440px;margin:0 0 28px}
+.hero-actions{gap:24px;margin:0;align-items:center}
+.primary,.hero-actions .primary,.routine-launch .primary{background:var(--accent);border:0;border-radius:6px;color:#fff;min-height:48px;font-size:16px;padding:14px 20px;box-shadow:none}
+.primary:hover{background:#ab102c;box-shadow:none}
+.hero-secondary{font-size:16px;color:var(--ink);padding:12px 0;border:0;text-decoration:underline;text-underline-offset:6px}
+:is(.eyebrow,.section-number,.hero-footnote,.object-tag,.art-label-top,.art-grid,.object-orbit,.gym-scroll-hint,.gym-finish,.gym-control,.motion-backdrop,.spark,.info-icon,.map-grid,.map-label,.journey b){display:none!important}
+.hero-art{background:#19191c;min-height:0;aspect-ratio:1.35;border:0;border-radius:12px}
+.hero-art .art-label-bottom{font-family:var(--font-body);font-size:13px!important;letter-spacing:0;text-transform:none;color:var(--muted);bottom:7%!important}
+.object-reset{font-size:14px;color:var(--muted);padding:12px 0}
+.journey{display:flex;margin:0 0 72px;padding:18px 0;gap:0;background:var(--panel);border:0;border-radius:8px}
+.journey a{flex:1;padding:4px 24px;border:0;min-height:44px;display:flex;flex-direction:column;gap:6px}
+.journey span{font-size:16px;text-transform:none;letter-spacing:0;color:var(--ink)}
+.journey strong{font-size:14px;color:var(--muted);font-weight:400;line-height:1.4}
+.journey a:hover{background:#242427}
+.section-heading{margin:0 0 24px;padding:0;background:none;border:0}
+.section-heading h2,.fuel-sidebar .section-heading h2{font-size:36px;line-height:1.15;letter-spacing:-1px}
+.section-description,.section-heading-copy p{font-size:16px!important;line-height:1.6;color:var(--muted)}
+.section-heading>.pill{display:none}
+.explorer-grid{gap:24px;align-items:start}
+.anatomy-panel,.muscle-panel{background:var(--panel);border:0;border-radius:12px;padding:28px}
+.panel-top{font-size:14px;letter-spacing:0;text-transform:none}
+.panel-top>span:first-child{font-size:0}.panel-top>span:first-child::after{content:'Choose a muscle';font-size:14px}
+.small-tag{font-size:13px;border:0;background:none}
+.panel-bottom{font-size:14px;flex-wrap:wrap;gap:12px}
+.view-toggle{background:#242427;border:0;border-radius:6px;padding:4px}
+.view-toggle button,.part-tabs button{min-height:44px;font-size:14px;border:0;border-radius:4px}
+.view-toggle button.selected,.part-tabs button.selected{background:var(--accent);color:#fff;box-shadow:none}
+.body-stage,.anatomy-panel{min-height:0}
+.anatomy-views .anatomy-view{margin:0}
+.anatomy-views .body-map-figure{height:auto!important;max-height:440px;width:100%!important}
+.anatomy-view figcaption{font-size:13px;text-transform:none;letter-spacing:0}
+.map-hint{font-size:14px;color:var(--muted);margin:16px 0 0}
+.muscle-select-row{justify-content:flex-end;margin-bottom:16px}
+.muscle-title h2{font-size:36px;letter-spacing:-1px}
+.muscle-title>span{font-size:14px;color:var(--muted)}
+.part-tabs{border:0;gap:8px;flex-wrap:wrap;padding-bottom:0}
+.part-tabs button:not(.selected){background:#29292d;color:var(--ink)}
+.part-info{display:block;background:none;padding:20px 0}
+.part-info h3{font-size:18px}
+.part-info p,.brief-notes{font-size:16px;line-height:1.65;color:var(--muted)}
+.exercise-heading h3{font-size:18px}.exercise-heading>span{font-size:13px;color:var(--muted)}
+.exercise{background:#222225;border:0;border-radius:6px;padding:18px;gap:14px;margin:10px 0;min-height:76px}
+.exercise:hover{background:#2b2b30}.exercise-icon{display:none}
+.exercise h4{font-size:16px;line-height:1.4}.exercise small{font-size:14px;line-height:1.5;color:var(--muted)}
+.exercise .arrow{font:22px Arial,sans-serif;color:var(--ink)}
+.growth-details{border:0;font-size:16px;padding-top:20px}.growth-details summary{min-height:44px}
+.knowledge-strip{padding:24px 0;margin:20px 0 64px;background:none;border:0;gap:24px}
+.knowledge-strip p{font-size:16px;line-height:1.6;color:var(--muted)}
+.knowledge-strip button{font-size:14px;color:var(--ink)}
+#routines{border:0;margin-top:0;padding-top:0}
+.routine-launch{padding:32px;background:var(--panel);border:0;border-radius:12px}
+.routine-launch h2{font-size:30px;line-height:1.2;margin:0 0 12px;letter-spacing:-.8px}
+.routine-launch p:not(.eyebrow){font-size:16px;color:var(--muted)}
+.my-workout{border:0;padding-top:0;margin-top:64px}
+.my-workout-card,.my-workout-empty{background:var(--panel);border:0;border-radius:12px;padding:28px;min-height:0}
+.my-workout-empty>svg,.my-workout-empty>span{display:none}
+.my-workout-empty h3{font-size:22px}.my-workout-empty p{font-size:16px;max-width:640px;color:var(--muted);line-height:1.6}
+.reminder-section{background:var(--panel);border:0;border-radius:12px;padding:28px;margin:32px 0 64px}
+.reminder-section h3{font-size:20px}.reminder-section p{font-size:16px;color:var(--muted)}
+.reminder-icon{display:none}
+footer{border:0;padding:28px 0 40px;gap:24px;flex-wrap:wrap}
+footer>span{font-size:14px;color:var(--muted)}
+.text-button,.secondary{font-size:14px;min-height:44px;color:var(--ink)}
+.secondary{background:#29292d;border:0;border-radius:6px}
+button,a,input,select,textarea{font-family:Arial,Helvetica,sans-serif}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid #fff;outline-offset:4px}
+select,input,textarea{font-size:16px}
+dialog{background:#171719;color:var(--ink);border:1px solid var(--line);border-radius:12px}
+dialog .tiny,dialog small,dialog .muted{color:var(--muted);font-size:14px;line-height:1.6}
+dialog .macro-card,.calendar-burn{background:#242427;border:0;box-shadow:none}
+dialog .macro-fill{background:#63303d}
+dialog .macro-copy p,dialog .macro-amount>span{font-size:14px}
+@media(max-width:1100px){
+ main{padding:0 28px}.header{padding:20px 28px}
+ .intro.studio-hero{gap:24px;padding:48px 0 36px}
+ .intro h1{font-size:54px}.hero-copy>p:not(.eyebrow){font-size:16px}
+ .journey a{padding:4px 16px}.journey strong{display:none}
+}
+@media(max-width:700px){
+ main{padding:0 16px}.header{padding:16px;gap:12px;background:var(--bg)}
+ .mobile-nav-toggle{background:var(--panel);border:0;border-radius:6px;color:var(--ink);min-height:44px}
+ .header nav a{background:var(--panel);border:0;border-radius:6px}.header nav a.active{background:#303034;color:#fff}
+ .intro.studio-hero{display:block;padding:32px 0 24px}
+ .intro h1{font-size:48px;margin:0 0 20px;letter-spacing:-2px}
+ .hero-copy>p:not(.eyebrow){font-size:16px;line-height:1.6;margin:0 0 24px;max-width:350px}
+ .hero-actions{gap:20px;flex-wrap:wrap}.hero-actions .primary{font-size:15px}.hero-secondary{font-size:15px}
+ .hero-object{display:none}
+ .journey{margin:0 0 40px;padding:12px;gap:8px;display:flex;flex-wrap:wrap}
+ .journey a{padding:8px;min-height:44px;flex:1 1 auto;justify-content:center;align-items:center}
+ .journey span{font-size:14px}.journey strong{display:none}
+ .section-heading h2{font-size:30px}.section-heading-copy p{font-size:16px!important}
+ .section-heading{margin-bottom:20px}
+ .explorer-grid{gap:20px}.anatomy-panel,.muscle-panel{padding:20px}
+ .body-stage{min-height:0!important;padding:12px 0 0}
+ .anatomy-views{height:auto!important;min-height:0;max-width:260px;margin:auto}
+ .anatomy-views.both{display:grid;grid-template-columns:1fr 1fr;max-width:100%;gap:12px}
+ .anatomy-views .body-map-figure{max-height:330px}
+ .anatomy-views.both .body-map-figure{max-height:260px}
+ .muscle-title h2{font-size:32px}.muscle-panel{padding:20px}
+ .knowledge-strip{display:block;margin:20px 0 40px;padding:0}.knowledge-strip button{margin-top:12px}
+ .routine-launch{padding:24px;gap:24px}.routine-launch h2{font-size:28px}
+ .my-workout{margin-top:40px}.my-workout-card,.my-workout-empty{padding:24px}
+ .reminder-section{padding:24px;margin:24px 0 40px}
+ .reminder-section p{font-size:16px}.reminder-section button{width:100%}
+ .dashboard-dialog-top h2,.dialog-heading h2{font-size:26px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+/* Forms keep their own structure, with the same flat surfaces and readable labels. */
+dialog::backdrop{background:#000b;backdrop-filter:none}
+dialog :is(.routine-form,.routine-output,.routine-empty,.progress-card,.meal-prompt,.journal-card){background:#202023;border:0;border-radius:8px;box-shadow:none}
+dialog .routine-form label,dialog .routine-form legend{font-size:16px}
+dialog .routine-small{font-size:14px;color:var(--muted);line-height:1.6}
+dialog .close{border:0;background:#303034;box-shadow:none;outline:0;border-radius:6px;width:44px;height:44px;min-width:44px}
+dialog .close:focus-visible{outline:2px solid #fff;outline-offset:3px}
+dialog :is(.macro-card,.macro-fill,.macro-icon){background-image:none;box-shadow:none;border-radius:8px}
+dialog .macro-copy h4{font-size:18px}
+dialog .macro-icon{background:transparent}
+#myWorkouts{border:0;margin-top:48px;padding-top:0}
+#myWorkouts .section-heading h2{font-size:30px}
+.journey a::before,.journey a::after{display:none!important}
+.header nav a.active{color:#fff}
+footer .text-button{color:var(--muted)}
+@media(max-width:700px){#myWorkouts{margin-top:40px}.journey a{border:0!important}.exercise-heading{flex-wrap:wrap;gap:8px}.exercise-heading h3{white-space:nowrap}}
+/* The supplied Ryze mountain and wordmark form one brand asset. */
+.header .ryze-brand,footer .ryze-brand{display:inline-flex;align-items:center;line-height:1;flex-shrink:0;letter-spacing:normal}
+.ryze-logo{display:block;width:128px;height:80px;object-fit:contain}
+.header{padding-top:12px;padding-bottom:12px}
+footer .ryze-logo{width:112px;height:70px}
+@media(max-width:700px){.header .ryze-brand{font-size:inherit}.header .ryze-logo{width:100px;height:64px}.header{padding-top:8px;padding-bottom:12px}}

@@ -1,6 +1,6 @@
-# Form & Fuel
+# Ryze
 
-A buildless responsive fitness site. Serve `dist` over HTTP; no installation or secret keys are required.
+Ryze (formerly Form & Fuel) is a buildless responsive fitness site. Serve `dist` over HTTP; no installation or secret keys are required.
 
 The production interface uses a graphite and botanical green design, an original SVG training illustration, Inter body text, Plus Jakarta Sans headings, and an Explore → Plan → Fuel → Reflect navigation sequence. Large colored horizontal nutrition cards replace the circular gauges. Existing local data remains under the same `form-fuel-v1` storage key.
 
@@ -76,3 +76,8 @@ Nutrition now includes a strength goal (maintenance energy), a modest 5% muscle-
 
 ## Selected-date wellness targets and daily burn
 Activity/recovery targets now default to the selected Daily Fuel day and expose an explicit effective date. Entries apply inclusively from that date until the next saved target version. Existing earlier and later versions remain intact. Total daily burn can be recorded, edited or removed separately from workout burn, with no automatic food-target adjustment. Sleep and daily-burn edits preserve other fields in the same date record. Run node tests/wellness.cjs for date and independent-record regression checks.
+
+
+## Ryze branding and interface
+
+The current interface uses quiet black surfaces, red actions, readable system typography, and the supplied Ryze mountain wordmark. The desktop 3D dumbbell remains interactive; mobile prioritizes the training tools and defaults to a single body view. The background gym walkthrough is no longer loaded. Existing `form-fuel-*` storage keys and Firebase resource names are intentionally retained so the rebrand preserves saved progress and cloud compatibility.
